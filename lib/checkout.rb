@@ -5,4 +5,12 @@ class Checkout
     @basket = []
   end
 
+  def scan(item)
+    @basket << item
+  end
+
+  def basket
+    @basket
+  end
+
 end

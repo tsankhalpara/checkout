@@ -11,4 +11,12 @@ describe Checkout do
     end
   end
 
+  describe "total" do
+    it "calculates basket total with no promotions" do
+      co = Checkout.new
+      co.scan(001)
+      expect(co.total).to eq 9.25
+    end
+  end
+
 end
