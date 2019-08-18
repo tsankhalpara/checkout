@@ -9,6 +9,12 @@ class Checkout
     @basket << item
   end
 
+  def total
+    sum = 0.00
+    @basket.each { |a| sum += @items[a] }
+    return sum
+  end
+
   def basket
     @basket
   end
