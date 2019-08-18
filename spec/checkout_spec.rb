@@ -1,3 +1,4 @@
+require 'checkout'
 require 'spec_helper'
 
 describe Checkout do
