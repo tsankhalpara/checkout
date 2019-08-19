@@ -33,6 +33,16 @@ describe Checkout do
       co.scan(001)
       expect(co.total).to eq "£36.95"
     end
+
+    it "reduces price of chairs to £8.50 when there are 2 or more and takes
+      10% off purchases over £60" do
+      co = Checkout.new(PromotionalRules.new)
+      co.scan(001)
+      co.scan(002)
+      co.scan(001)
+      co.scan(003)
+      expect(co.total).to eq "£73.76"
+    end
   end
 
 end
