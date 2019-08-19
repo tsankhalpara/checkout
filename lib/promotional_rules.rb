@@ -11,7 +11,7 @@ class PromotionalRules
     if sum > 60.00
       sum = (sum * 0.9).round(2)
     end
-    return "£" + ('%.2f' % sum).to_s
+    return "Price = £" + ('%.2f' % sum).to_s
   end
 
 end
