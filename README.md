@@ -40,8 +40,9 @@ Total price expected: £73.76
 
 ### How to run
 
-- Clone this repository
-- In terminal:
+- Clone this repository.
+- Change directory to this local repository.
+- In terminal run:
   ```
   bundle install
   irb
