@@ -15,14 +15,15 @@ describe Checkout do
     it "calculates basket total with no promotions" do
       co = Checkout.new
       co.scan(001)
-      expect(co.total).to eq 9.25
+      expect(co.total).to eq "£9.25"
     end
 
     it "takes 10% off purchases over £60" do
       co = Checkout.new
+      co.scan(001)
       co.scan(002)
-      co.scan(002)
-      expect(co.total).to eq 81.00
+      co.scan(003)
+      expect(co.total).to eq "£66.78"
     end
   end
 
