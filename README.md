@@ -45,11 +45,12 @@ Total price expected: £73.76
   ```
   bundle install
   irb
-  require './lib/checkout'
+  require './lib/checkout.rb'
   co = Checkout.new(PromotionalRules.new)
   co.scan(item_product_code)
   co.total
-  ``` 
+  exit
+  ```
 
 
 ### How to test
