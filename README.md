@@ -41,7 +41,16 @@ Total price expected: £73.76
 ### How to run
 
 - Clone this repository
-- Run ``` bundle install ```
+- In terminal:
+  ```
+  bundle install
+  irb
+  require './lib/checkout'
+  co = Checkout.new(PromotionalRules.new)
+  co.scan(item_product_code)
+  co.total
+  ``` 
+
 
 ### How to test
 
