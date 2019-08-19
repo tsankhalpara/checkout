@@ -10,6 +10,10 @@ class Checkout
   end
 
   def total
+    if @basket.count(001) >= 2
+      @items[001] = 8.50
+    end
+
     sum = 0.00
     @basket.each { |a| sum += @items[a] }
 
